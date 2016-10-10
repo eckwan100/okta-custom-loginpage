@@ -17,11 +17,11 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-app.get('/process_post', urlencodedParser, function (req, res) {
+app.post('/process_post', urlencodedParser, function (req, res) {
    // Prepare output in JSON format
    response = {
-      first_name:req.query.first_name,
-      last_name:req.query.last_name
+      first_name:req.body.first_name,
+      last_name:req.body.last_name
    };
    console.log(response);
    res.end(JSON.stringify(response));
