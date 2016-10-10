@@ -10,10 +10,11 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function(request, response) {
-  response.render('index');
+  //response.render('index');
+  response.render('okta_index');
 });
 
-app.get('/process_get', function (req, res) {
+/*app.get('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
       username:req.query.username,
@@ -21,7 +22,7 @@ app.get('/process_get', function (req, res) {
    };
    console.log(response);
    res.end(JSON.stringify(response));
-})
+})*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
