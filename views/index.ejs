@@ -11,12 +11,13 @@
 	<script type="text/javascript">
 		var orgUrl = 'https://edwindemo.oktapreview.com';
 		var baseUrl = 'https://enigmatic-tor-28854.herokuapp.com';
+		var redirectUrl = 'https://edwindemo.oktapreview.com/home/zendesk/0oa8j3ydusGYb5IuO0h7/120';
 		var oktaSignIn = new OktaSignIn({baseUrl: orgUrl});
 
 		oktaSignIn.renderEl(
 		  { el: '#okta-login-container' },
 		  function (res) {
-		    if (res.status === 'SUCCESS') { res.session.setCookieAndRedirect(orgUrl); }
+		    if (res.status === 'SUCCESS') { res.session.setCookieAndRedirect(redirectUrl); }
 		  }
 		);
 	</script>
