@@ -14,6 +14,14 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
+app.get('/index2', function(request, response) {
+  //response.render('index');
+  response.render('index2');
+});
+
+app.get('/processed', function(request, response) {
+
+});
 /*app.get('/process_get', function (req, res) {
    // Prepare output in JSON format
    response = {
